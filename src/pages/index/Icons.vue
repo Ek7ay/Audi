@@ -1,29 +1,20 @@
 <template>
     <div class="icons">
-      <div class="icon">
-        <img :src="rec"/>
-        <p>充值中心</p>
-      </div>
-      <div class="icon">
-        <img :src="rec"/>
-        <p>充值中心</p>
-      </div>
-      <div class="icon">
-        <img :src="rec"/>
-        <p>充值中心</p>
-      </div>
-      <div class="icon">
-        <img :src="rec"/>
-        <p>充值中心</p>
-      </div>
-      <div class="icon">
-        <img :src="rec"/>
-        <p>充值中心</p>
-      </div>
-      <div class="icon">
-        <img :src="rec"/>
-        <p>充值中心</p>
-      </div>
+      <swiper :options="swiperOption">
+        <swiper-slide>
+          <div class="icon">
+            <img :src="rec"/>
+            <p>充值中心</p>
+          </div>
+        </swiper-slide>
+
+        <swiper-slide>
+          <div class="icon">
+            <img :src="rec"/>
+            <p>充值中心</p>
+          </div>
+        </swiper-slide>
+      </swiper>
     </div>
 </template>
 
@@ -32,18 +23,22 @@
         name: "Icons",
         data () {
           return {
-            rec: require("../../assets/img/index/icons/Rechargecenter@2x.png")
+            rec: require("../../assets/img/index/icons/Rechargecenter@2x.png"),
+            swiperOption: {},
           }
         }
     }
 </script>
 
 <style lang="stylus" scoped>
-  /*@import '~styles/mixin.styl'*/
-  .icons
-    overflow hidden
+  @import '~styles/mixin.styl'
+  .icons >>> .swiper-container
     height 0
     padding-bottom 50%
+  /*.icons*/
+  /*  overflow hidden*/
+  /*  height 0*/
+  /*  padding-bottom 50%*/
     .icon
       float left
       width 25%

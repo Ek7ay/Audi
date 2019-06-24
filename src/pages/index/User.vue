@@ -30,7 +30,9 @@
 </script>
 
 <style lang="stylus" scoped>
+@import '~styles/varibles.styl'
 .user
+  background-color $bgColor
   height 1.09rem
   display flex
   justify-content space-between

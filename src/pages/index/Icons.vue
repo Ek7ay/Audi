@@ -101,14 +101,16 @@
 </script>
 
 <style lang="stylus" scoped>
+  @import '~styles/varibles.styl'
   @import '~styles/mixin.styl'
-  .icons >>> .swiper-container
-    height 0
-    padding-bottom 50%
-  /*.icons*/
+  .icons
+    background-color $bgColor
   /*  overflow hidden*/
   /*  height 0*/
   /*  padding-bottom 50%*/
+  .icons >>> .swiper-container
+    height 0
+    padding-bottom 50%
     .icon
       float left
       width 25%

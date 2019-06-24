@@ -4,6 +4,7 @@
     <user></user>
     <banner></banner>
     <index-icons></index-icons>
+    <cusser></cusser>
   </div>
 </template>
 
@@ -12,6 +13,8 @@
   import User from './User'
   import Banner from './Banner'
   import IndexIcons from './Icons'
+  import Cusser from './Cusser'
+
 
   export default {
     name: "index",
@@ -20,6 +23,7 @@
       User,
       Banner,
       IndexIcons,
+      Cusser,
     },
     data() {
       return {

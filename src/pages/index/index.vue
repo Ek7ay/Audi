@@ -5,7 +5,7 @@
     <banner></banner>
     <index-icons></index-icons>
     <cusser></cusser>
-    <bot-tab></bot-tab>
+    <navigation></navigation>
   </div>
 </template>
 
@@ -15,7 +15,7 @@
   import Banner from './Banner'
   import IndexIcons from './Icons'
   import Cusser from './Cusser'
-  import BotTab from '@/common/Bottab'
+  import Navigation from '@/common/Navigation'
 
   export default {
     name: "index",
@@ -25,7 +25,7 @@
       Banner,
       IndexIcons,
       Cusser,
-      BotTab,
+      Navigation,
     },
     data() {
       return {

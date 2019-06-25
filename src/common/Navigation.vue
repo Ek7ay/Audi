@@ -25,10 +25,10 @@
           return {
             isActive: [true, false, false, false],
             ImgUrl: [
-              require("../pages/navigation/Shopping-mall.png"),
-              require("../pages/navigation/Card-not-selected.png"),
-              require("../pages/navigation/Packagenotselected@2x.png"),
-              require("../pages/navigation/My.png")
+              require("../assets/img/navigation/Shopping-mall.png"),
+              require("../assets/img/navigation/Card-not-selected.png"),
+              require("../assets/img/navigation/Packagenotselected@2x.png"),
+              require("../assets/img/navigation/My.png")
             ]
           }
         },
@@ -38,37 +38,37 @@
               case "o":
                 this.isActive = [true, false, false, false];
                 this.ImgUrl = [
-                  require("../pages/navigation/Shopping-mall.png"),
-                  require("../pages/navigation/Card-not-selected.png"),
-                  require("../pages/navigation/Packagenotselected@2x.png"),
-                  require("../pages/navigation/My.png")
+                  require("../assets/img/navigation/Shopping-mall.png"),
+                  require("../assets/img/navigation/Card-not-selected.png"),
+                  require("../assets/img/navigation/Packagenotselected@2x.png"),
+                  require("../assets/img/navigation/My.png")
                 ];
                 break;
               case "t":
                 this.isActive = [false, true, false, false];
                 this.ImgUrl = [
-                  require("../pages/navigation/Home-page-unchecked.png"),
-                  require("../pages/navigation/Card-selected.png"),
-                  require("../pages/navigation/Packagenotselected@2x.png"),
-                  require("../pages/navigation/My.png")
+                  require("../assets/img/navigation/Home-page-unchecked.png"),
+                  require("../assets/img/navigation/Card-selected.png"),
+                  require("../assets/img/navigation/Packagenotselected@2x.png"),
+                  require("../assets/img/navigation/My.png")
                 ];
                 break;
               case "s":
                 this.isActive = [false, false, true, false];
                 this.ImgUrl = [
-                  require("../pages/navigation/Home-page-unchecked.png"),
-                  require("../pages/navigation/Card-not-selected.png"),
-                  require("../pages/navigation/Selectedpackage@2x.png"),
-                  require("../pages/navigation/My.png")
+                  require("../assets/img/navigation/Home-page-unchecked.png"),
+                  require("../assets/img/navigation/Card-not-selected.png"),
+                  require("../assets/img/navigation/Selectedpackage@2x.png"),
+                  require("../assets/img/navigation/My.png")
                 ];
                 break;
               case "f":
                 this.isActive = [false, false, false, true];
                 this.ImgUrl = [
-                  require("../pages/navigation/Home-page-unchecked.png"),
-                  require("../pages/navigation/Card-not-selected.png"),
-                  require("../pages/navigation/Packagenotselected@2x.png"),
-                  require("../pages/navigation/My-choice.png")
+                  require("../assets/img/navigation/Home-page-unchecked.png"),
+                  require("../assets/img/navigation/Card-not-selected.png"),
+                  require("../assets/img/navigation/Packagenotselected@2x.png"),
+                  require("../assets/img/navigation/My-choice.png")
                 ];
                 break;
             }

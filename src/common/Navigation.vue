@@ -43,6 +43,9 @@
                   require("../assets/img/navigation/Packagenotselected@2x.png"),
                   require("../assets/img/navigation/My.png")
                 ];
+                this.$router.push({
+                  path: "/",
+                })
                 break;
               case "t":
                 this.isActive = [false, true, false, false];
@@ -70,6 +73,9 @@
                   require("../assets/img/navigation/Packagenotselected@2x.png"),
                   require("../assets/img/navigation/My-choice.png")
                 ];
+                this.$router.push({
+                  path: "/my"
+                })
                 break;
             }
           }

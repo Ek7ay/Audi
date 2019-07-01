@@ -1,7 +1,7 @@
 <template>
     <div class="cell">
-      <div class="message">{{message}}</div>
-      <div class="phone">{{phone}}</div>
+      <div class="message">{{cell.message}}</div>
+      <div class="phone">{{cell.phone}}</div>
       <div class="arrow">
         <img :src="imgUrl"/>
       </div>
@@ -10,6 +10,11 @@
 
 <script>
     export default {
+        props: {
+          cell: {
+            type: Object,
+          }
+        },
         data () {
           return {
               message: "咨询帮助",

@@ -27,8 +27,8 @@
         </div>
     </div>
     <my-icons></my-icons>
-    <cell></cell>
-    <cell></cell>
+    <cell :cell="cell1"></cell>
+    <cell :cell="cell2"></cell>
     <navigation></navigation>
   </div>
 </template>
@@ -39,7 +39,6 @@
   import Cell from '@/common/Cell'
 
   export default {
-    name: "index",
     components: {
       MyIcons,
       Navigation,
@@ -51,7 +50,8 @@
         editUrl: require("../../assets/img/my/Edit@2x.png"),
         codeUrl: require("../../assets/img/my/Activateredemptioncodeentry@2x.png"),
         doubtUrl: require("../../assets/img/my/Problem@2x.png"),
-
+        cell1: { message: "站豆延期", phone: "400-888-8888" },
+        cell2: { message: "咨询帮助" }
       }
     }
   }

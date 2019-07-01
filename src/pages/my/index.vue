@@ -13,7 +13,17 @@
             </div>
         </div>
         <div class="cardBottom">
-
+            <div class="grid gridBorder">
+                <p>2000</p>
+                <div>可用站豆</div>
+            </div>
+            <div class="grid">
+                <p>1000</p>
+                <div>
+                  失效站豆
+                  <img :src="doubtUrl"/>
+                </div>
+            </div>
         </div>
     </div>
     <navigation></navigation>
@@ -33,6 +43,7 @@
         portraitUrl: require("../../assets/img/my/Headportrait@2x.png"),
         editUrl: require("../../assets/img/my/Edit@2x.png"),
         codeUrl: require("../../assets/img/my/Activateredemptioncodeentry@2x.png"),
+        doubtUrl: require("../../assets/img/my/Problem@2x.png"),
       }
     }
   }
@@ -57,9 +68,10 @@
         display flex
         flex-flow column
         justify-content space-between
+        box-shadow 0 .04rem #E3E3E5;
         .cardTop
             flex 1
-            border-bottom .02rem solid #33333324
+            border-bottom .02rem solid #F0F0F2
             text-align center
             font-size .24rem
             position relative
@@ -93,4 +105,24 @@
                 bottom .02rem
         .cardBottom
             flex 1
+            display flex
+            justify-content space-between
+            align-items center
+            .gridBorder
+                border-right .01rem solid #F0F0F2
+            .grid
+                height .80rem
+                flex 1
+                text-align center
+                display flex
+                flex-flow column
+                justify-content space-between
+                div
+                    font-size .32rem
+                    color #909090
+                img
+                    width .30rem
+                    margin-left .06rem
+                    position relative
+                    bottom .03rem
 </style>

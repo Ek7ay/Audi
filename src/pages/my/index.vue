@@ -27,6 +27,8 @@
         </div>
     </div>
     <my-icons></my-icons>
+    <cell></cell>
+    <cell></cell>
     <navigation></navigation>
   </div>
 </template>
@@ -34,12 +36,14 @@
 <script>
   import MyIcons from './Icons'
   import Navigation from '@/common/Navigation'
+  import Cell from '@/common/Cell'
 
   export default {
     name: "index",
     components: {
       MyIcons,
-      Navigation
+      Navigation,
+      Cell
     },
     data() {
       return {
@@ -47,6 +51,7 @@
         editUrl: require("../../assets/img/my/Edit@2x.png"),
         codeUrl: require("../../assets/img/my/Activateredemptioncodeentry@2x.png"),
         doubtUrl: require("../../assets/img/my/Problem@2x.png"),
+
       }
     }
   }
@@ -70,7 +75,7 @@
         display flex
         flex-flow column
         justify-content space-between
-        box-shadow 0 .04rem #E3E3E5;
+        box-shadow 0 .04rem #E3E3E5
         .cardTop
             flex 1
             border-bottom .02rem solid #F0F0F2

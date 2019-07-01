@@ -26,16 +26,19 @@
             </div>
         </div>
     </div>
+    <my-icons></my-icons>
     <navigation></navigation>
   </div>
 </template>
 
 <script>
+  import MyIcons from './Icons'
   import Navigation from '@/common/Navigation'
 
   export default {
     name: "index",
     components: {
+      MyIcons,
       Navigation
     },
     data() {
@@ -51,7 +54,6 @@
 
 <style lang="stylus" scoped>
 @import '~styles/varibles.styl'
-@import '~styles/mixin.styl'
 .my
     .redBack
         height 3rem

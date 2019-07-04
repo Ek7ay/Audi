@@ -1,6 +1,8 @@
 <template>
     <div class="voucher">
         <on-off :data="data1"/>
+        <info-card/>
+        <info-card/>
         <navigation/>
     </div>
 </template>
@@ -8,10 +10,12 @@
 <script>
     import Navigation from '@/common/Navigation'
     import OnOff from './Onoff'
+    import InfoCard from './InfoCard'
     export default {
         components: {
             Navigation,
-            OnOff
+            OnOff,
+            InfoCard
         },
         data () {
           return {

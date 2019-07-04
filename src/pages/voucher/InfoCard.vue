@@ -2,12 +2,12 @@
     <div class="infoCard">
       <div class="imgBox">
         <img src="../../assets/img/voucher/Voucherbackground@2x.png"/>
-        <span>2000</span>
+        <span>{{cardInfo.price}}</span>
       </div>
       <div class="info">
-        <p>企鹅健康：价值<span>1100</span>元</p>
-        <p>有效期至：2019-01-01</p>
-        <p>状态：未激活</p>
+        <p>{{project}}：价值<span>{{cardInfo.price}}</span>元</p>
+        <p>有效期至：{{cardInfo.date}}</p>
+        <p>状态：{{cardInfo.state}}</p>
       </div>
       <button class="">使用说明</button>
     </div>
@@ -15,9 +15,17 @@
 
 <script>
     export default {
+        props: {
+          cardInfo: {
+            type: Object
+          }
+        },
         data () {
           return {
-
+            project: "大狗健康",
+            price: "2000",
+            date: "2019-01-01",
+            state: "未激活"
           }
         }
     }

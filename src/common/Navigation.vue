@@ -56,7 +56,7 @@
                   require("../assets/img/navigation/My.png")
                 ];
                 this.$router.push({
-                  path: "/Voucher",
+                  path: "/vou",
                 });
                 break;
               case "s":

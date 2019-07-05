@@ -1,6 +1,7 @@
 <template>
     <div class="package">
       <on-off :data="data1"/>
+      <pack-card/>
       <navigation/>
     </div>
 </template>
@@ -8,10 +9,12 @@
 <script>
     import Navigation from '@/common/Navigation'
     import OnOff from '../../common/OnOff'
+    import PackCard from './PackCard'
     export default {
         components: {
           Navigation,
-          OnOff
+          OnOff,
+          PackCard
         },
         data () {
           return {

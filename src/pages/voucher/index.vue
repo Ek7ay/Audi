@@ -1,11 +1,16 @@
 <template>
     <div class="voucher">
-        <on-off :data="data1"/>
-        <info-card
-          v-for="item in cardList"
-          :cardInfo="item"
-          :key="item.id"
+        <on-off
+          :data="data1"
+          @click.native="itch"
         />
+        <div v-show="isShow">
+          <info-card
+            v-for="item in cardList"
+            :cardInfo="item"
+            :key="item.id"
+          />
+        </div>
         <navigation/>
     </div>
 </template>
@@ -22,6 +27,7 @@
         },
         data () {
           return {
+            isShow: false,
             data1: { 'info': '大狗健康', 'bTop': false },
             data2: { 'info': '代驾服务', 'bTop': true },
             cardList: [{
@@ -46,6 +52,11 @@
               state: "003",
               btnState: "c"
             }]
+          }
+        },
+        methods: {
+          itch () {
+            this.isShow = this.isShow === true ? false: true;
           }
         }
     }

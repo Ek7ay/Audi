@@ -1,5 +1,5 @@
 <template>
-    <div :class="{ 'too': true, 'tooBor': data.bTop }" @click="switchover()">
+    <div :class="{ too: true, tooBor: data.bTop }" @click="switchover()">
       {{data.info}}
       <img :src="imgUrl"/>
     </div>
@@ -14,14 +14,14 @@
         },
         data () {
             return {
-              imgUrl: require("../../assets/img/voucher/Enter@2x.png"),
+              imgUrl: require("../assets/img/voucher/Enter@2x.png"),
             }
         },
         methods: {
           switchover () {
-            this.imgUrl = this.imgUrl === require("../../assets/img/voucher/Enter@2x.png")
-              ? require("../../assets/img/voucher/drop-down@2x.png")
-              : require("../../assets/img/voucher/Enter@2x.png");
+            this.imgUrl = this.imgUrl === require("../assets/img/voucher/Enter@2x.png")
+              ? require("../assets/img/voucher/drop-down@2x.png")
+              : require("../assets/img/voucher/Enter@2x.png");
           }
         }
     }

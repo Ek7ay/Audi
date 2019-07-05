@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Index from '@/pages/index'
 import My from '@/pages/my'
 import Vou from  '@/pages/voucher'
+import Package from '@/pages/package'
 
 Vue.use(Router);
 
@@ -22,6 +23,11 @@ export default new Router({
       path: '/vou',
       name:  'Vou',
       component: Vou
+    },
+    {
+      path: '/package',
+      name:  'Package',
+      component: Package
     }
   ]
 })

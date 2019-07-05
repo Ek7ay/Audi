@@ -17,7 +17,7 @@
 
 <script>
     import Navigation from '@/common/Navigation'
-    import OnOff from './Onoff'
+    import OnOff from '../../common/OnOff'
     import InfoCard from './InfoCard'
     export default {
         components: {
@@ -28,8 +28,8 @@
         data () {
           return {
             isShow: false,
-            data1: { 'info': '大狗健康', 'bTop': false },
-            data2: { 'info': '代驾服务', 'bTop': true },
+            data1: { info: '大狗健康', bTop: false },
+            data2: { info: '代驾服务', bTop: true },
             cardList: [{
               id: "01",
               project: "大狗健康",

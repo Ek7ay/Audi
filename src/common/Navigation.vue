@@ -67,6 +67,9 @@
                   require("../assets/img/navigation/Selectedpackage@2x.png"),
                   require("../assets/img/navigation/My.png")
                 ];
+                this.$router.push({
+                  path: "/package"
+                });
                 break;
               case "f":
                 this.isActive = [false, false, false, true];

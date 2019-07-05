@@ -5,27 +5,48 @@
         <span>{{cardInfo.price}}</span>
       </div>
       <div class="info">
-        <p>{{project}}：价值<span>{{cardInfo.price}}</span>元</p>
+        <p>{{cardInfo.project}}：价值<span>{{cardInfo.price}}</span>元</p>
         <p>有效期至：{{cardInfo.date}}</p>
-        <p>状态：{{cardInfo.state}}</p>
+        <p>状态：{{state}}</p>
       </div>
-      <button class="">使用说明</button>
+      <button :class="{ cut: cutActive, hid: hidActive }">{{btnState}}</button>
     </div>
 </template>
 
 <script>
     export default {
         props: {
-          cardInfo: {
+            cardInfo: {
             type: Object
           }
         },
         data () {
           return {
-            project: "大狗健康",
-            price: "2000",
-            date: "2019-01-01",
-            state: "未激活"
+            cutActive: true,
+            hidActive: false,
+          }
+        },
+        computed: {
+          state () {
+            if (this.cardInfo.state === "001") { return "未激活" }
+            if (this.cardInfo.state === "002") { return "已激活" }
+            if (this.cardInfo.state === "003") { return "已过期" }
+          },
+          btnState () {
+            if (this.cardInfo.btnState === "a") {
+              this.cutActive = true;
+              this.hidActive = false;
+              return "激活"
+            }
+            if (this.cardInfo.btnState === "b") {
+              this.cutActive = false;
+              this.hidActive = false;
+              return "使用说明"
+            }
+            if (this.cardInfo.btnState === "c") {
+              this.hidActive = true;
+              return ""
+            }
           }
         }
     }
@@ -72,5 +93,8 @@
     background-color #ff6156
     color #fff
     font-size .30rem
-
+  .cut
+    background-color #FFA330
+  .hid
+    display none
 </style>

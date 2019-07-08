@@ -12,7 +12,7 @@
           <p>有效期至：{{packData.packTime}}</p>
           <p>状态：{{state}}</p>
         </div>
-        <button>去使用</button>
+        <button :class="{ btnHide: isShow }">去使用</button>
       </div>
       <div class="detailBox">
         <div class="detail">
@@ -37,23 +37,21 @@
           return {
             imgUrl: require("../../assets/img/voucher/Voucherbackground@2x.png"),
             detailImgUrl: require("../../assets/img/package/Entryofconsumptiondetails@2x.png"),
-            pName: "标准洗车",
-            times: 10,
-            packName: "洗车A套餐",
-            packModel: "5座及以下小型轿车",
-            packTime: "2019-09-03",
-            packState: "001",
+            isShow: false
           }
         },
         computed: {
           state () {
             if (this.packData.packState === "001") {
+              this.isShow = false;
               return "可使用"
             }
             if (this.packData.packState === "002") {
+              this.isShow = true;
               return "已完成"
             }
             if (this.packData.packState === "003") {
+              this.isShow = true;
               return "已失效"
             }
           }
@@ -107,6 +105,8 @@
         background-color #FFA330
         color #fff
         font-size .30rem
+      .btnHide
+        display none
     .detailBox
       background-color $bgColor
       height .78rem

@@ -27,7 +27,7 @@
         },
         data () {
           return {
-            isShow: false,
+            isShow: true,
             data1: { info: '大狗健康', bTop: false },
             data2: { info: '代驾服务', bTop: true },
             cardList: [{

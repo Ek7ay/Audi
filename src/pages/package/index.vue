@@ -52,7 +52,7 @@
                 pName: "至尊洗车",
                 times: 30,
                 packName: "洗车C套餐",
-                packModel: "5座及以下小型轿车",
+                packModel: "7座及以下小型轿车",
                 packTime: "2019-12-03",
                 packState: "003"
               }

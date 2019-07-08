@@ -43,7 +43,7 @@
                 pName: "高级洗车",
                 times: 20,
                 packName: "洗车B套餐",
-                packModel: "5座及以下小型轿车",
+                packModel: "7座及以下小型轿车",
                 packTime: "2019-09-03",
                 packState: "002"
               },

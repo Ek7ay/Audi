@@ -4,6 +4,7 @@ import Index from '@/pages/index'
 import My from '@/pages/my'
 import Vou from  '@/pages/voucher'
 import Package from '@/pages/package'
+import Health from '@/pages/health'
 
 Vue.use(Router);
 
@@ -28,6 +29,11 @@ export default new Router({
       path: '/package',
       name:  'Package',
       component: Package
+    },
+    {
+      path: '/health',
+      name:  'Health',
+      component: Health
     }
   ]
 })

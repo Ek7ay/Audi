@@ -1,15 +1,11 @@
 <template>
-    <div class="health">
-      <h-title></h-title>
+    <div class="title">
+        hello world
     </div>
 </template>
 
 <script>
-    import HTitle from './HTitle'
     export default {
-        components: {
-          HTitle
-        },
         data () {
           return {
 

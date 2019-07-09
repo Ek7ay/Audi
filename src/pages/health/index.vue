@@ -13,8 +13,9 @@
           class="priceItem"
           v-for="(item, index) of priceList"
           :key="index"
+          @click="select(item, index)"
         >
-          <div class="priceContent">
+          <div :class="{ priceContent: true, change: index === selected ? true : false }">
             {{item}}元
           </div>
         </div>
@@ -32,8 +33,9 @@
           return {
             imgUrl: require("../../assets/img/health/Penguinhealthcard.png"),
             titleInfo: "大狗健康：全国各大药店均可使用",
-            price: 1000,
-            priceList: [100, 200, 500, 1000, 2000, 3000]
+            price: 100,
+            priceList: [100, 200, 500, 1000, 2000, 3000],
+            selected: 0
           }
         },
         computed: {
@@ -42,6 +44,12 @@
           },
           totalPrice () {
             return this.price + this.price * 0.1
+          }
+        },
+        methods: {
+          select (item, index) {
+            this.selected = index;
+            this.price = item;
           }
         }
     }
@@ -95,4 +103,7 @@
         display flex
         align-items center
         justify-content center
+      .change
+        color $bgColor
+        background-color #FE4437
 </style>

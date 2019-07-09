@@ -1,6 +1,6 @@
 <template>
     <div class="health">
-      <h-title></h-title>
+      <h-title :info="titleInfo"></h-title>
     </div>
 </template>
 
@@ -12,7 +12,7 @@
         },
         data () {
           return {
-
+            titleInfo: "大狗健康：全国各大药店均可使用"
           }
         }
     }

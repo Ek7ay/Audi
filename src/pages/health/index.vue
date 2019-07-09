@@ -8,6 +8,17 @@
           <p>购买&nbsp&nbsp&nbsp&nbsp赠送&nbsp&nbsp&nbsp&nbsp合计</p>
         </div>
       </div>
+      <div class="priceBox">
+        <div
+          class="priceItem"
+          v-for="(item, index) of priceList"
+          :key="index"
+        >
+          <div class="priceContent">
+            {{item}}元
+          </div>
+        </div>
+      </div>
     </div>
 </template>
 
@@ -22,6 +33,7 @@
             imgUrl: require("../../assets/img/health/Penguinhealthcard.png"),
             titleInfo: "大狗健康：全国各大药店均可使用",
             price: 1000,
+            priceList: [100, 200, 500, 1000, 2000, 3000]
           }
         },
         computed: {
@@ -42,10 +54,10 @@
     justify-content center
     align-items center
     background-color $bgColor
-    height 4.2rem
+    padding .20rem 0
     position relative
     img
-      width 6rem
+      width 90%
     .infoBox
       width 2.9rem
       height 1rem
@@ -61,4 +73,26 @@
       p:nth-child(2)
         margin-top 10px
         font-size 14px
+  .priceBox
+    background-color $bgColor
+    border-top .01rem solid #F2F2F2
+    padding .20rem .10rem 0 .10rem
+    overflow hidden
+    .priceItem
+      width 33.3%
+      height 1.6rem
+      float left
+      display flex
+      justify-content center
+      .priceContent
+        width 92%
+        height 1.4rem
+        background-color #FFEBEB
+        border .01rem solid #FE5347
+        color #FE4437
+        font-size .40rem
+        border-radius .16rem
+        display flex
+        align-items center
+        justify-content center
 </style>

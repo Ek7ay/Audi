@@ -168,7 +168,7 @@
       p:first-child
         font-size .32rem
       span
-        color red
+        color #FE4437
     .bottom
       display flex
       justify-content space-between
@@ -182,7 +182,7 @@
           position relative
           bottom .06rem
       div:nth-child(2)
-        color red
+        color #FE4437
       .hide
         display none
 </style>

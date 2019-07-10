@@ -33,4 +33,5 @@
       font-size .32rem
       color $bgColor
       background-color #FE4437
+      border .01rem solid #FE4437
 </style>

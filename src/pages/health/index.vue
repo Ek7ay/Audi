@@ -61,7 +61,7 @@
             unit: "站豆",
             yuEr: 2000,
             unselectedImgUrl: require("../../assets/img/health/Nopaymentselected@2x.png"),
-            selectedImgUrl: require("../../assets/img/health/Purchasesuccess@2x.png"),
+            selectedImgUrl: require("../../assets/img/health/Selectivepayment@2x.png"),
             payStyleList: ["001", "002"],
             btnMsg: "确认支付"
           }
@@ -100,7 +100,9 @@
             }
           },
           confirm () {
-            alert("事件触发成功")
+            this.$router.push({
+              path: "/PaySu"
+            })
           }
         }
     }

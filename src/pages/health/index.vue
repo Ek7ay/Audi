@@ -63,7 +63,11 @@
             unselectedImgUrl: require("../../assets/img/health/Nopaymentselected@2x.png"),
             selectedImgUrl: require("../../assets/img/health/Selectivepayment@2x.png"),
             payStyleList: ["001", "002"],
-            btnMsg: "确认支付"
+            btnMsg: {
+              message: "确认支付",
+              color: "#fff",
+              backgroundColor: '#FE4437'
+            }
           }
         },
         computed: {
@@ -101,7 +105,13 @@
           },
           confirm () {
             this.$router.push({
-              path: "/PaySu"
+              path: "/PaySu",
+              query: {
+                payInfo: {
+                  price: this.price,
+                  paySe: this.paySe
+                },
+              },
             })
           }
         }

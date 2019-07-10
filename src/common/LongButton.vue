@@ -1,7 +1,7 @@
 <template>
     <div class="btnBox">
-      <div class="btn">
-        {{message}}
+      <div class="btn" :style="{ color: info.color, backgroundColor: info.backgroundColor }">
+        {{info.message}}
       </div>
     </div>
 </template>
@@ -10,12 +10,12 @@
     export default {
         props: {
           msg: {
-            type: String
+            type: Object
           }
         },
         data () {
           return {
-            message: this.msg
+            info: this.msg
           }
         }
     }
@@ -31,7 +31,5 @@
       text-align center
       border-radius .10rem
       font-size .32rem
-      color $bgColor
-      background-color #FE4437
       border .01rem solid #FE4437
 </style>

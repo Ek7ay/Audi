@@ -20,6 +20,21 @@
           </div>
         </div>
       </div>
+      <div class="payBox">
+        <div class="top">
+          <p>选择支付方式</p>
+          <p>站豆可用余额&nbsp<span>{{yuEr}}</span>&nbsp个</p>
+        </div>
+        <div
+          class="bottom"
+          v-for="(item, index) of repayStyle"
+          :key="index"
+          @click="paySelect(item, index)"
+        >
+          <div><img :src="index === paySe ? selectedImgUrl : unselectedImgUrl"/>{{item}}</div>
+          <div :class="{ hide: index === paySe ? false : true }">{{price}}&nbsp{{unit}}</div>
+        </div>
+      </div>
     </div>
 </template>
 
@@ -35,7 +50,13 @@
             titleInfo: "大狗健康：全国各大药店均可使用",
             price: 100,
             priceList: [100, 200, 500, 1000, 2000, 3000],
-            selected: 0
+            selected: 0,
+            paySe: 3,
+            unit: "站豆",
+            yuEr: 2000,
+            unselectedImgUrl: require("../../assets/img/health/Nopaymentselected@2x.png"),
+            selectedImgUrl: require("../../assets/img/health/Purchasesuccess@2x.png"),
+            payStyleList: ["001", "002"]
           }
         },
         computed: {
@@ -44,12 +65,32 @@
           },
           totalPrice () {
             return this.price + this.price * 0.1
+          },
+          repayStyle () {
+            const list = this.payStyleList.map(item => {
+                if(item === "001") { return "站豆支付" }
+                if(item === "002") { return "微信支付" }
+              });
+            return list;
           }
         },
         methods: {
           select (item, index) {
             this.selected = index;
             this.price = item;
+          },
+          paySelect(item, index) {
+            this.paySe = index;
+            switch (index) {
+              case 0:
+                this.unit = "站豆";
+                break;
+              case 1:
+                this.unit = "元";
+                break;
+              default:
+                break;
+            }
           }
         }
     }
@@ -106,4 +147,32 @@
       .change
         color $bgColor
         background-color #FE4437
+  .payBox
+    background-color $bgColor
+    margin-top .20rem
+    padding .40rem .20rem
+    .top
+      display flex
+      justify-content space-between
+      font-size .28rem
+      p:first-child
+        font-size .32rem
+      span
+        color red
+    .bottom
+      display flex
+      justify-content space-between
+      font-size .28rem
+      margin-top .50rem
+      div:first-child
+        font-size .32rem
+        img
+          width .36rem
+          margin-right .20rem
+          position relative
+          bottom .06rem
+      div:nth-child(2)
+        color red
+      .hide
+        display none
 </style>

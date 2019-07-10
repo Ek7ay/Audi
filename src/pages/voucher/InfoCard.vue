@@ -9,7 +9,7 @@
         <p>有效期至：{{cardInfo.date}}</p>
         <p>状态：{{state}}</p>
       </div>
-      <button :class="{ cut: cutActive, hid: hidActive }">{{btnState}}</button>
+      <button :class="{ cut: cutActive, hid: hidActive }" @click="setOut(cardInfo.state)">{{btnState}}</button>
     </div>
 </template>
 
@@ -46,6 +46,19 @@
             if (this.cardInfo.btnState === "c") {
               this.hidActive = true;
               return ""
+            }
+          }
+        },
+        methods: {
+          setOut (data) {
+            switch (data) {
+              case "001":
+                this.$router.push({
+                  path: "/card-active"
+                });
+                break;
+              default:
+                break;
             }
           }
         }

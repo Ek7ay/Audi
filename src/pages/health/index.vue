@@ -29,20 +29,26 @@
           class="bottom"
           v-for="(item, index) of repayStyle"
           :key="index"
-          @click="paySelect(item, index)"
+          @click="paySelect(index)"
         >
           <div><img :src="index === paySe ? selectedImgUrl : unselectedImgUrl"/>{{item}}</div>
           <div :class="{ hide: index === paySe ? false : true }">{{price}}&nbsp{{unit}}</div>
         </div>
       </div>
+      <long-button
+        :msg="btnMsg"
+        @click.native="confirm"
+      />
     </div>
 </template>
 
 <script>
     import HTitle from './HTitle'
+    import LongButton from '@/common/LongButton'
     export default {
         components: {
-          HTitle
+          HTitle,
+          LongButton,
         },
         data () {
           return {
@@ -56,7 +62,8 @@
             yuEr: 2000,
             unselectedImgUrl: require("../../assets/img/health/Nopaymentselected@2x.png"),
             selectedImgUrl: require("../../assets/img/health/Purchasesuccess@2x.png"),
-            payStyleList: ["001", "002"]
+            payStyleList: ["001", "002"],
+            btnMsg: "确认支付"
           }
         },
         computed: {
@@ -79,7 +86,7 @@
             this.selected = index;
             this.price = item;
           },
-          paySelect(item, index) {
+          paySelect(index) {
             this.paySe = index;
             switch (index) {
               case 0:
@@ -91,6 +98,9 @@
               default:
                 break;
             }
+          },
+          confirm () {
+            alert("事件触发成功")
           }
         }
     }

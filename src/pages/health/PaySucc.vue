@@ -10,6 +10,7 @@
       <long-button
         class="btn1"
         :msg="btn1"
+        @click.native="activation"
       />
       <long-button
         :msg="btn2"
@@ -50,6 +51,11 @@
           goHome () {
             this.$router.push({
               path: "/"
+            })
+          },
+          activation () {
+            this.$router.push({
+              path: "/vou"
             })
           }
         }

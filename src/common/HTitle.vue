@@ -1,7 +1,10 @@
 <template>
     <div class="title">
-        {{titleInfo}}
-      <img :src="imgUrl"/>
+        {{titleInfo.text}}
+      <img
+        :src="imgUrl"
+        :class="{ hide: !titleInfo.isShow}"
+      />
     </div>
 </template>
 
@@ -9,12 +12,12 @@
     export default {
         props: {
           info: {
-            type: String
+            type: Object
           }
         },
         data () {
           return {
-            imgUrl: require("../../assets/img/health/explain@2x.png"),
+            imgUrl: require("../assets/img/health/explain@2x.png"),
             titleInfo: this.info
           }
         }
@@ -36,4 +39,6 @@
       position absolute
       right .30rem
       top .32rem
+    .hide
+      display none
 </style>

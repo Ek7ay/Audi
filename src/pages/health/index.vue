@@ -43,7 +43,7 @@
 </template>
 
 <script>
-    import HTitle from './HTitle'
+    import HTitle from '@/common/HTitle'
     import LongButton from '@/common/LongButton'
     export default {
         components: {
@@ -53,7 +53,10 @@
         data () {
           return {
             imgUrl: require("../../assets/img/health/Penguinhealthcard.png"),
-            titleInfo: "大狗健康：全国各大药店均可使用",
+            titleInfo: {
+              text: "大狗健康：全国各大药店均可使用",
+              isShow: true
+            },
             price: 100,
             priceList: [100, 200, 500, 1000, 2000, 3000],
             selected: 0,

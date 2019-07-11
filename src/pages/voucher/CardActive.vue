@@ -6,7 +6,10 @@
          :info="item"
          :key="item.id"
        />
-       <long-button :msg="btnMsg"/>
+       <long-button
+         :msg="btnMsg"
+         @click.native="jump"
+       />
     </div>
 </template>
 
@@ -56,6 +59,13 @@
               color: "#fff",
               backgroundColor: '#FE4437'
             }
+          }
+        },
+        methods: {
+          jump () {
+            this.$router.push({
+              path: "/active-succ"
+            })
           }
         }
     }

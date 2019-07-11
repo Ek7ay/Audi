@@ -7,6 +7,7 @@ import Package from '@/pages/package'
 import Health from '@/pages/health'
 import PaySu from '@/pages/health/PaySucc'
 import CardActive from '@/pages/voucher/CardActive'
+import ActiveSucc from '@/pages/voucher/ActiveSucc'
 
 Vue.use(Router);
 
@@ -46,6 +47,11 @@ export default new Router({
       path: '/card-active',
       name:  'CardActive',
       component: CardActive
+    },
+    {
+      path: '/active-succ',
+      name:  'ActiveSucc',
+      component: ActiveSucc
     }
   ]
 })

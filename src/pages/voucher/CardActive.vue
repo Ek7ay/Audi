@@ -1,17 +1,17 @@
 <template>
     <div class="carActive">
-     <h-title :info="titleInfo"/>
+       <h-title :info="titleInfo"/>
+       <field/>
     </div>
 </template>
 
 <script>
     import HTitle from '@/common/HTitle'
+    import Field from '@/common/Field'
     export default {
         components: {
           HTitle,
-        },
-        props: {
-
+          Field
         },
         data () {
           return {

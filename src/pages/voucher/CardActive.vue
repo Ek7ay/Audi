@@ -1,16 +1,23 @@
 <template>
     <div class="carActive">
        <h-title :info="titleInfo"/>
-       <field/>
+       <field
+         v-for="item of fieldInfo"
+         :info="item"
+         :key="item.id"
+       />
+       <long-button :msg="btnMsg"/>
     </div>
 </template>
 
 <script>
     import HTitle from '@/common/HTitle'
-    import Field from '@/common/Field'
+    import LongButton from '@/common/LongButton'
+    import Field from './Field'
     export default {
         components: {
           HTitle,
+          LongButton,
           Field
         },
         data () {
@@ -19,6 +26,36 @@
               text: "首次激活需完善个人信心后才能使用",
               isShow: false
             },
+            fieldInfo: [{
+              id: "001",
+              itemName: "姓名",
+              placeholder: "请输入姓名",
+              isPlaceholderRight: false,
+              btnShow: false
+            },{
+              id: "002",
+              itemName: "电话",
+              placeholder: "请输入电话号码",
+              isPlaceholderRight: false,
+              btnShow: false
+            },{
+              id: "003",
+              itemName: "身份证",
+              placeholder: "请输入身份证号码",
+              isPlaceholderRight: false,
+              btnShow: false
+            },{
+              id: "004",
+              itemName: "验证码",
+              placeholder: "请输入验证码",
+              isPlaceholderRight: false,
+              btnShow: true
+            }],
+            btnMsg: {
+              message: "激活并保存",
+              color: "#fff",
+              backgroundColor: '#FE4437'
+            }
           }
         }
     }

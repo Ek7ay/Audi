@@ -8,6 +8,7 @@ import Health from '@/pages/health'
 import PaySu from '@/pages/health/PaySucc'
 import CardActive from '@/pages/voucher/CardActive'
 import ActiveSucc from '@/pages/voucher/ActiveSucc'
+import Order from '@/pages/order'
 
 Vue.use(Router);
 
@@ -52,6 +53,11 @@ export default new Router({
       path: '/active-succ',
       name:  'ActiveSucc',
       component: ActiveSucc
+    },
+    {
+      path: '/order',
+      name:  'Order',
+      component: Order
     }
   ]
 })

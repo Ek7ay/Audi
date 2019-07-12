@@ -4,6 +4,7 @@
             v-for="item of cardInfo"
             :info="item"
             :key="item.id"
+            @click.native="toDetail"
         />
     </div>
 </template>
@@ -155,6 +156,13 @@
                   }
                 ]
             }
+        },
+        methods: {
+          toDetail () {
+            this.$router.push({
+              path: "/order-details"
+            })
+          }
         }
     }
 </script>

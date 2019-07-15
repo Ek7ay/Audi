@@ -6,7 +6,10 @@
 
         <div class="plateBox">
           <div>车牌号码</div>
-          <div class="plateImgBox">
+          <div
+            @click="getCity"
+            class="plateImgBox"
+          >
             <img :src="imgUrl1"/>
             <span>京</span>
           </div>
@@ -54,6 +57,11 @@
         methods: {
           getIn (data) {
             alert( "支付方式" + data);
+          },
+          getCity () {
+            this.$router.push({
+              path: "/city"
+            })
           }
         }
     }

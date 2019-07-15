@@ -11,6 +11,7 @@ import ActiveSucc from '@/pages/voucher/ActiveSucc'
 import Order from '@/pages/order'
 import OrderDetails from '@/pages/order/OrderDetails'
 import Insurance from '@/pages/Insurance'
+import CityList from '@/pages/Insurance/CityList'
 
 Vue.use(Router);
 
@@ -70,6 +71,11 @@ export default new Router({
       path: '/insurance',
       name:  'Insurance',
       component: Insurance
+    },
+    {
+      path: '/city',
+      name:  'CityList',
+      component: CityList
     }
   ]
 })

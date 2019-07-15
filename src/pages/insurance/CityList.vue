@@ -4,6 +4,7 @@
           class="cityItem"
           v-for="(item, index) of cityList"
           :key="index"
+          @click="citySelect(index)"
         >
           <div>{{item.jane}}<span>{{item.province}}</span></div>
           <div>
@@ -126,6 +127,11 @@
                 province: "澳门"
               }
             ]
+          }
+        },
+        methods: {
+          citySelect (index) {
+            alert(index)
           }
         }
     }

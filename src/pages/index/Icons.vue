@@ -93,7 +93,7 @@
               id: "015",
               imgUrl: require("../../assets/img/index/icons/Claimsinquiry@2x.png"),
               desc: "出险理赔",
-              path: "/health"
+              path: "/insurance"
             },{
               id: "016",
               imgUrl: require("../../assets/img/index/icons/vehiclemaintenance@2x.png"),

@@ -10,6 +10,7 @@ import CardActive from '@/pages/voucher/CardActive'
 import ActiveSucc from '@/pages/voucher/ActiveSucc'
 import Order from '@/pages/order'
 import OrderDetails from '@/pages/order/OrderDetails'
+import Insurance from '@/pages/Insurance'
 
 Vue.use(Router);
 
@@ -64,6 +65,11 @@ export default new Router({
       path: '/order-details',
       name:  'OrderDetails',
       component: OrderDetails
+    },
+    {
+      path: '/insurance',
+      name:  'Insurance',
+      component: Insurance
     }
   ]
 })

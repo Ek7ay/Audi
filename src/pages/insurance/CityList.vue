@@ -7,7 +7,7 @@
           @click="citySelect(index)"
         >
           <div>{{item.jane}}<span>{{item.province}}</span></div>
-          <div>
+          <div v-show="index === pick ? true : false">
             <img :src="imgUrl"/>
           </div>
         </div>
@@ -15,6 +15,8 @@
 </template>
 
 <script>
+    import store from '@/store'
+    import { mapGetters } from 'vuex' // 引入Vuex数据
     export default {
         data () {
           return {
@@ -126,12 +128,18 @@
                 jane: "澳",
                 province: "澳门"
               }
-            ]
+            ],
+            pick: 0
           }
         },
         methods: {
           citySelect (index) {
-            alert(index)
+            this.pick = index;
+            // store.dispatch('setPick', this.pick); //vuex存入值
+            store.dispatch('setPick', {
+              pick: this.pick
+            })
+
           }
         }
     }
